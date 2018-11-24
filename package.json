@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run bundle & npm run less", 
-    "bundle": "webpack",
     "less": "lessc app/src/styles/style.less app/dist/styles/style.css",
+    "bundle": "webpack",
+    "build": "npm run bundle & npm run less",
     "start": "npm run build && node server"
   },
   "keywords": [
@@ -16,6 +16,10 @@
   ],
   "author": "Frank McCready",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fmccready/handlebars-examples.git"
+  },
   "dependencies": {
     "babel": "^6.23.0",
     "express": "^4.14.1",
@@ -23,6 +27,7 @@
     "handlebars-loader": "^1.4.0"
   },
   "devDependencies": {
+    "css-loader": "^0.28.0",
     "webpack": "^2.2.1"
   }
 }
